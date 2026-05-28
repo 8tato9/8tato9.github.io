@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CORSO STEM</title>
 
   <style>
@@ -20,6 +20,18 @@
       font-family: Arial, sans-serif;
     }
 
+    /* HAMBURGER (solo mobile) */
+    #hamburger {
+      display: none;
+      font-size: 32px;
+      cursor: pointer;
+      padding: 15px;
+      background-color: var(--menu-bg);
+      color: white;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
     /* MENU LATERALE */
     nav#menu {
       position: fixed;
@@ -31,6 +43,7 @@
       padding: 20px;
       box-sizing: border-box;
       color: white;
+      transition: transform 0.3s ease;
     }
 
     nav#menu h2 {
@@ -61,109 +74,96 @@
       padding: 20px;
     }
 
+    /* TITOLO MULTICOLORE */
     h1 {
       font-size: 40px;
-      font-family: Arial, sans-serif;
       background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet);
       -webkit-background-clip: text;
+      background-clip: text;
       color: transparent;
     }
 
     .multicolor {
       background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet);
       -webkit-background-clip: text;
+      background-clip: text;
       color: transparent;
       font-weight: bold;
     }
-    /* HAMBURGER (solo mobile) */
-#hamburger {
-  display: none;
-  font-size: 30px;
-  cursor: pointer;
-  margin-bottom: 20px;
-}
 
-/* MENU LATERALE DESKTOP */
-nav#menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: var(--menu-width);
-  height: 100vh;
-  background-color: var(--menu-bg);
-  padding: 20px;
-  box-sizing: border-box;
-  color: white;
-  transition: transform 0.3s ease;
-}
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
 
-/* MOBILE: menu nascosto */
-@media (max-width: 768px) {
-  nav#menu {
-    transform: translateX(-100%);
-  }
+      #hamburger {
+        display: block;
+      }
 
-  nav#menu.open {
-    transform: translateX(0);
-  }
+      nav#menu {
+        transform: translateX(-100%);
+      }
 
-  #hamburger {
-    display: block;
-  }
+      nav#menu.open {
+        transform: translateX(0);
+      }
 
-  main {
-    margin-left: 0 !important;
-  }
-}
+      main {
+        margin-left: 0;
+      }
 
+      header {
+        margin-left: 10px;
+      }
+    }
   </style>
 </head>
 
 <body>
 
+<!-- HAMBURGER FUORI DAL MENU -->
+<div id="hamburger">☰ Menu</div>
+
 <!-- MENU RESPONSIVE -->
 <nav id="menu" aria-label="Menu laterale">
-  <div id="hamburger">☰</div>
-
-   <h2>Menu</h2>
+  <h2>Menu</h2>
   <a class="btn" href="index.html">🏠 Home</a>
   <a class="btn" href="galleria.html">📷 Galleria</a>
   <a class="btn" href="documenti.html">🗂️ Documenti</a>
   <a class="btn" href="giochino/sb3.html">🎮 Gioco</a>
 </nav>
 
-  <header>
-    <div style="text-align:center;">
-      <h1>PON Matematica a Colori</h1>
-    </div>
-  </header>
+<header>
+  <div style="text-align:center;">
+    <h1>PON Matematica a Colori</h1>
+  </div>
+</header>
 
-  <main>
-    <p class="multicolor">Corso STEM con progettazione di una pagina Web</p>
+<main>
+  <p class="multicolor">Corso STEM con progettazione di una pagina Web</p>
 
-    <p>In questo corso impareremo:</p>
-    <ul>
-      <li>Funzioni base del PC;</li>
-      <li>Rudimenti di programmazione;</li>
-      <li>Programmazione a blocchi mediante software;</li>
-      <li>Creare un videogioco con la programmazione a blocchi;</li>
-      <li>IA cos'è e come utilizzarla per creare immagini;</li>
-      <li>Creare una pagina web;</li>
-      <li>Caricare elementi su un sito web (immagini, video, videogames);</li>
-      <li>Creare una pagina web complessa (modificare sfondo, inserimento menù laterale);</li>
-      <li>Pubblicare il sito online con GitHub Pages;</li>
-      <li>Disegno 3D;</li>
-      <li>Stampa 3D;</li>
-    </ul>
-  </main>
+  <p>In questo corso impareremo:</p>
+  <ul>
+    <li>Funzioni base del PC;</li>
+    <li>Rudimenti di programmazione;</li>
+    <li>Programmazione a blocchi mediante software;</li>
+    <li>Creare un videogioco con la programmazione a blocchi;</li>
+    <li>IA cos'è e come utilizzarla per creare immagini;</li>
+    <li>Creare una pagina web;</li>
+    <li>Caricare elementi su un sito web (immagini, video, videogames);</li>
+    <li>Creare una pagina web complessa (modificare sfondo, inserimento menù laterale);</li>
+    <li>Pubblicare il sito online con GitHub Pages;</li>
+    <li>Disegno 3D;</li>
+    <li>Stampa 3D;</li>
+  </ul>
+</main>
 
-  <hr>
+<hr>
 
-  <footer>
-    <div style="text-align:center; color:#666;">
-      <p><b>© Ideato e progettato da 8tato9</b></p>
-    </div>
-  </footer>
+<footer>
+  <div style="text-align:center; color:#666;">
+    <p><strong>© Ideato e progettato da 8tato9</strong></p>
+  </div>
+</footer>
+
 <script>
   const menu = document.getElementById("menu");
   const hamburger = document.getElementById("hamburger");
