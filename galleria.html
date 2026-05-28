@@ -1,145 +1,146 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <style>
-  :root {
-    --menu-width: 200px;
-    --menu-bg: #003366;
-    --btn-bg: #0059b3;
-    --btn-hover: #0073e6;
-    --page-bg: #e6f2ff;
-  }
-
-  body {
-    margin: 0;
-    background-color: var(--page-bg);
-    font-family: Arial, sans-serif;
-  }
-
-  /* MENU LATERALE */
-  nav#menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: var(--menu-width);
-    height: 100vh;
-    background-color: var(--menu-bg);
-    padding: 20px;
-    box-sizing: border-box;
-    color: white;
-  }
-
-  nav#menu h2 {
-    text-align: center;
-    margin-top: 0;
-  }
-
-  nav#menu a.btn {
-    display: block;
-    background-color: var(--btn-bg);
-    color: white;
-    padding: 12px;
-    margin: 12px 0;
-    text-decoration: none;
-    text-align: center;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: 0.2s;
-  }
-
-  nav#menu a.btn:hover {
-    background-color: var(--btn-hover);
-  }
-
-  /* CONTENUTO DELLA PAGINA */
-  main {
-    margin-left: calc(var(--menu-width) + 30px);
-    padding: 20px;
-  }
-
- /*IMMAGINI AFFIANCATE, GAP PER DISTANZIARLE*/
-.row {
-  display: flex;
-  gap: 40px; /* spazio tra le immagini */
-  align-items: center;
-  margin-left: 250px; /*distanza dal bordo sinistro della pagina */
-}
-    /* HAMBURGER (solo mobile) */
-#hamburger {
-  display: none;
-  font-size: 30px;
-  cursor: pointer;
-  margin-bottom: 20px;
-}
-
-/* MENU LATERALE DESKTOP */
-nav#menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: var(--menu-width);
-  height: 100vh;
-  background-color: var(--menu-bg);
-  padding: 20px;
-  box-sizing: border-box;
-  color: white;
-  transition: transform 0.3s ease;
-}
-
-/* MOBILE: menu nascosto */
-@media (max-width: 768px) {
-  nav#menu {
-    transform: translateX(-100%);
-  }
-
-  nav#menu.open {
-    transform: translateX(0);
-  }
-
-  #hamburger {
-    display: block;
-  }
-
-  main {
-    margin-left: 0 !important;
-  }
-}
-
-
-</style>
-
-
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Galleria</title>
-</head>
-<body>
- <!-- MENU RESPONSIVE -->
-<nav id="menu" aria-label="Menu laterale">
-  <div id="hamburger">☰</div>
 
-    <h2>Menu</h2>
+  <style>
+    :root {
+      --menu-width: 200px;
+      --menu-bg: #003366;
+      --btn-bg: #0059b3;
+      --btn-hover: #0073e6;
+      --page-bg: #e6f2ff;
+    }
+
+    body {
+      margin: 0;
+      background-color: var(--page-bg);
+      font-family: Arial, sans-serif;
+    }
+
+    /* HAMBURGER (solo mobile) */
+    #hamburger {
+      display: none;
+      font-size: 32px;
+      cursor: pointer;
+      padding: 15px;
+      background-color: var(--menu-bg);
+      color: white;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    /* MENU LATERALE */
+    nav#menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: var(--menu-width);
+      height: 100vh;
+      background-color: var(--menu-bg);
+      padding: 20px;
+      box-sizing: border-box;
+      color: white;
+      transition: transform 0.3s ease;
+    }
+
+    nav#menu h2 {
+      text-align: center;
+      margin-top: 0;
+    }
+
+    nav#menu a.btn {
+      display: block;
+      background-color: var(--btn-bg);
+      color: white;
+      padding: 12px;
+      margin: 12px 0;
+      text-decoration: none;
+      text-align: center;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    nav#menu a.btn:hover {
+      background-color: var(--btn-hover);
+    }
+
+    /* CONTENUTO DELLA PAGINA */
+    main {
+      margin-left: calc(var(--menu-width) + 30px);
+      padding: 20px;
+    }
+
+    /* IMMAGINI AFFIANCATE */
+    .row {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      margin-left: 250px;
+      margin-top: 30px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+
+      #hamburger {
+        display: block;
+      }
+
+      nav#menu {
+        transform: translateX(-100%);
+      }
+
+      nav#menu.open {
+        transform: translateX(0);
+      }
+
+      main {
+        margin-left: 0;
+      }
+
+      .row {
+        flex-direction: column;
+        margin-left: 0;
+        gap: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HAMBURGER FUORI DAL MENU -->
+<div id="hamburger">☰ Menu</div>
+
+<!-- MENU RESPONSIVE -->
+<nav id="menu" aria-label="Menu laterale">
+  <h2>Menu</h2>
   <a class="btn" href="index.html">🏠 Home</a>
   <a class="btn" href="galleria.html">📷 Galleria</a>
   <a class="btn" href="documenti.html">🗂️ Documenti</a>
   <a class="btn" href="giochino/sb3.html">🎮 Gioco</a>
 </nav>
 
+<main>
+  <h1>Galleria</h1>
+  <p>In questa pagina saranno caricate le foto del corso.</p>
+</main>
 
-
-  <main>
-    <h1>Galleria</h1>
-    <p>In questa pagina saranno caricate le foto del corso.</p>
-  </main>
-  
-  <div class="row">
+<div class="row">
   <img src="img/ragazzihtml.png" width="300">
   <img src="img/ragazzimbot.png" width="300">
 </div>
 
-  <footer>
-    <p>© 2026</p>
-  </footer>
-  <script>
+<footer style="text-align:center; margin-top:20px;">
+  <p>© 2026</p>
+</footer>
+
+<!-- MENU SCRIPT -->
+<script>
   const menu = document.getElementById("menu");
   const hamburger = document.getElementById("hamburger");
 
