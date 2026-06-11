@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lezioni Svolte</title>
+
+  <style>
+    :root {
+      --menu-width: 200px;
+      --menu-bg: #003366;
+      --btn-bg: #0059b3;
+      --btn-hover: #0073e6;
+      --page-bg: #e6f2ff;
+    }
+
+    body {
+      margin: 0;
+      background-color: var(--page-bg);
+      font-family: Arial, sans-serif;
+    }
+
+    /* HAMBURGER (solo mobile) */
+    #hamburger {
+      display: none;
+      font-size: 32px;
+      cursor: pointer;
+      padding: 15px;
+      background-color: var(--menu-bg);
+      color: white;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    /* MENU LATERALE */
+    nav#menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: var(--menu-width);
+      height: 100vh;
+      background-color: var(--menu-bg);
+      padding: 20px;
+      box-sizing: border-box;
+      color: white;
+      transition: transform 0.3s ease;
+    }
+
+    nav#menu h2 {
+      text-align: center;
+      margin-top: 0;
+    }
+
+    nav#menu a.btn {
+      display: block;
+      background-color: var(--btn-bg);
+      color: white;
+      padding: 12px;
+      margin: 12px 0;
+      text-decoration: none;
+      text-align: center;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    nav#menu a.btn:hover {
+      background-color: var(--btn-hover);
+    }
+
+    /* CONTENUTO DELLA PAGINA */
+    main {
+      margin-left: calc(var(--menu-width) + 30px);
+      padding: 20px;
+    }
+
+    /* TITOLO MULTICOLORE */
+    h1 {
+      font-size: 40px;
+      background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .multicolor {
+      background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-weight: bold;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+
+      #hamburger {
+        display: block;
+      }
+
+      nav#menu {
+        transform: translateX(-100%);
+      }
+
+      nav#menu.open {
+        transform: translateX(0);
+      }
+
+      main {
+        margin-left: 0;
+      }
+
+      header {
+        margin-left: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HAMBURGER FUORI DAL MENU -->
+<div id="hamburger">☰ Menu</div>
+
+<!-- MENU RESPONSIVE -->
+<nav id="menu" aria-label="Menu laterale">
+  <h2>Menu</h2>
+  <a class="btn" href="index.html">🏠 Home</a>
+  <a class="btn" href="galleria.html">📷 Galleria</a>
+  <a class="btn" href="documenti.html">🗂️ Documenti</a>
+ <a class="btn" href="giochino.html">🎮 Gioco</a>
+ <a class="btn" href="lezioni.html">📖 Lezioni Svolte</a>
+
+
+</nav>
+
+<header>
+  <div style="text-align:center;">
+    <h1>Lezioni Svolte</h1>
+  </div>
+</header>
+
+<main>
+  <p class="multicolor">Lezione numero 1</p>
+
+  <p>Durante la prima lezione abbiamo affrontato i seguenti argomenti:</p>
+  <ul>
+    <li>Componenti PC;</li>
+    <li>Esplora risorse e Cartelle principali;</li>
+    <li>Creazione di un account locale;</li>
+    <li>Creazione di file e cartelle;</li>
+    <li>Imprinting dei linguaggi di programmazione, HTML5 e PROGRAMMAZIONE A BLOCCHI;</li>
+    <li>Download di Software per la programmazione a blocchi (mblock);</li>
+    <li>Esercitazione con gli Sprite;</li>
+    <li>Far muovere lo Sprite (destra/sinistra/salto);</li>
+    <li>Far parlare lo Sprite e farlo interagire con altri sprite;</li>
+    </ul>
+</main>
+<section class="video-section" style=margin-left:250px;>
+  <h2>Movimento dello sprite sul piano</h2>
+ 	<div class="video-container">
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/oHAxKBVGdSo?si=oKULjN3TeP3knFYT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+	</div>
+	<a class="btn" href="programmazione/1. sprite_movimento.mblock" download> ⬇️ Scarica l'esempio di codice a blocchi per muovere lo sprite sul piano
+	</a>
+	</section>
+
+
+<hr>
+
+<footer>
+  <div style="text-align:center; color:#666;">
+    <p><strong>© Ideato e progettato da 8tato9</strong></p>
+  </div>
+</footer>
+
+<script>
+  const menu = document.getElementById("menu");
+  const hamburger = document.getElementById("hamburger");
+
+  hamburger.addEventListener("click", () => {
+    menu.classList.toggle("open");
+  });
+</script>
+
+</body>
+</html>
