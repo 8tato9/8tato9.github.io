@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
+	<script>
+  window.counter = window.counter || {};
+  counter.track = counter.track || function(){};
+</script>
+
 	<script src="https://cdn.counter.dev/script.js" data-id="d44741ae-3a42-48a1-9baf-05f53866a308" data-utcoffset="2"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -181,7 +186,8 @@
  	<div class="video-container">
 	<iframe width="560" height="315" src="https://www.youtube.com/embed/oHAxKBVGdSo?si=oKULjN3TeP3knFYT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 	</div>
-	<a class="btn" href="programmazione/1. sprite_movimento.mblock" download> ⬇️ Scarica l'esempio di codice a blocchi per muovere lo sprite sul piano
+	<a class="btn" href="programmazione/1. sprite_movimento.mblock" download onclick="counter.track('download_sprite_movimento')"
+> ⬇️ Scarica l'esempio di codice a blocchi per muovere lo sprite sul piano
 	</a>
 	</section>
 
@@ -190,7 +196,8 @@
 	<div class="video-container">
 	<iframe width="560" height="315" src="https://www.youtube.com/embed/63NrqNgTDSw?si=sGyncRN_gl_2rBY-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 	</div>
-		<a class="btn" href="programmazione/Passeggiata al parco.mblock" download> ⬇️ Scarica l'esempio di codice a blocchi per vedere come far interagire più Sprite tra di loro.
+		<a class="btn" href="programmazione/Passeggiata al parco.mblock" download onclick="counter.track('download_sprite_movimento')"
+> ⬇️ Scarica l'esempio di codice a blocchi per vedere come far interagire più Sprite tra di loro.
 	</a>
 	</section>
 
