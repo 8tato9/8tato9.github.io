@@ -1,0 +1,103 @@
+<!-- il contenuto di questa parentesi è un commento che non inciderà con il codice della pagina -->
+
+
+
+
+<!DOCTYPE html>   							<!-- QUESTO CODICE INDICA CHE STIAMO PER SCRIVERE UNA PAGINA WEB IN HTML  -->
+
+<html lang="it">							<!-- QUESTO CODICE INDICA CHE IL CONTENUTO SARÁ IN ITALIANO  -->
+
+<head> 									<!-- INIZIO/APERTURA HEAD "LA TESTA" LA PARTE PIU ALTA DELLA PAGINA WEB  -->
+
+
+
+<!-- Inseriamo ora le VARIABILI che andranno a gestire le impostazioni della pagina web come: dimensioni carattere, colore carattere, colore sfondo pagina, ecc... -->
+
+<style> 								/* REGOLE CSS CHE MODIFICANO L'ASPETTO DELLA PAGINA */
+
+  :root {								/* INDICA IL LIVELLO PIU ALTO DI PRIVILEGI NELLA PAGINA HTML */
+
+				/* I VALORI CON # SONO COLORI ESADECIMALI, SI POSSONO TROVARE FACILMENTE SU INTERNET */
+
+    --menu-width: 200px; 						/* DIMENSIONI MENU */
+    --menu-bg: #003366; 						/* COLORE  PER IL MENU */
+    --btn-bg: #0059b3; 							/* COLORE DEI TASTI DEL MENU */
+    --btn-hover: #0073e6; 						/* COLORE DEI TASTI DEL MENU QUANDO CI SI PASSA SOPRA CON IL MOUSE */
+    --page-bg: #e6f2ff; 						/* COLORE DI SFONDO DELLA PAGINA WEB */
+  }
+
+
+  body {								/* INDICA CHE CREIAMO UNA VARIABILE BODY, E OGNI COSA CHE SARÁ INCLUSA IN BODY AVRÁ QUESTE CARATTERISTICHE */
+    margin: 0;								/* MARGINI DEL CONTENUTO DEL BODY = 0 */
+    background-color: var(--page-bg);					/* COLORE DI SFONDO DEL BODY É --page-bg con codice colore #e6f2ff, PUOI VEDERLO NELLE RIGHE IN ROOT */
+    font-family: Arial, sans-serif;					/* INDICA IL CARATTERE UTILIZZATO NEL BODY */
+  }
+
+  
+  nav#menu {								/* INDICA L'ELEMENTO nav CHE HA COME ID menu  */
+    position: fixed;							/* POSIZIONE FLESSIBILE */
+    top: 0;								/* MARGINE ALTO = 0 QUINDI SARÁ ATTACCATO ALLA PARTE ALTA DELLA PAGINA WEB */
+    left: 0;								/* MARGINE SINISTRO = 0 QUINDI SARÁ ATTACCATO AL LATO SINISTRO DELLA PAGINA WEB */
+    width: var(--menu-width);						/* AVRÁ LARGHEZZA PARI A QUANTO DICHIARATO NEL ROOT */
+    height: 100vh;							/* ALTEZZA = 100vh AVRÁ UN ALTEZZA LUNGA QUANTO TUTTA LA PAGINA WEB */
+    background-color: var(--menu-bg);					/* AVRÁ IL COLORE DI SFONDO DICHIARATO NEL ROOT  */
+    padding: 20px;							/* INDICA LO SPAZIO TRA IL TESTO E I BORDI DEL CONTENITORE DI TESTO  */
+    box-sizing: border-box;						/* GESTISCE ALTEZZA E LARGHEZZA DEGLI ELEMENTI NEL MENU  */
+    color: white;							/* COLORE BIANCO  */
+  }
+
+
+
+  nav#menu h2 {								/* SELEZIONA h2 ALL'INTERNO DEL MENU */
+    text-align: center;							/* IL TESTO DOVRÁ ESSERE ALLINEATO AL CENTRO */
+    margin-top: 0;							/* IL MARGINE SUPERIORE É 0 */
+  }
+
+
+
+  nav#menu a.btn {							/* INDICA L'LEMENTO TASTO/BTN "BUTTON" NELL'ELEMENTO nav CHE HA COME ID menu */
+    display: block;							/* INDICA AL BROWSER CHE L'ELEMENTO NELLA PAGINA DOVRÁ COMPORTARSI COME UN UNICO BLOCCO */
+    background-color: var(--btn-bg);					/* COLORE DI SFONDO COME DEFINITO IN ROOT */
+    color: white;							/* COLORE DEL TESTO = BIANCO */
+    padding: 12px;							/* DISTANZA DEL TESTO DAL CONTENITORE */
+    margin: 12px 0;							/* I MARGINI SONO 12pixel SOPRA E SOTTO E 0 A DESTRA E SINISTRA */
+    text-decoration: none;						/* DECORAZIONE TESTO NESSUNA */
+    text-align: center;							/* ALLINEAMENTO TESTO CENTRATA */
+    border-radius: 8px;							/* CURVATURA DEI BORDI 8pixel */
+    font-weight: bold;							/* TIPO DI CARATTERE: GRASSETTO */
+    transition: 0.2s;							/* ANIMA LE TRANSIZIONI DI 0.2 secondi */
+  }				
+
+
+  nav#menu a.btn:hover {						/* INDICA LA PROPRIETÁ DI HOVER (PASSAGGIO DEL MOUSE) SUI TASTI NEL MENU */
+    background-color: var(--btn-hover);					/* COLORE DI SFONDO DEI TASTI QUANDO CI SI PASSA SOPRA DEFINITO NEL ROOT */
+  }
+
+
+  main {								/* CREIAMO UNA VARIABILE main E TUTTO QUELLO CHE INSERIREMO IN FUTURO NELLA SEZIONE main AVRÁ DETERMINATE 										CARATTERISTICHE */
+    margin-left: calc(var(--menu-width) + 30px);			/* MARGINE SINISTRO COME DEFINITO NEL ROOT + 30pixel */
+    padding: 20px;							/* DISTANZA DAL CONTENITORE DI 20pixel */
+  }
+</style>								/* CHIUDIAMO STYLE */
+
+
+<meta charset="utf-8"> 							<!-- QUESTO CODICE INDICA CHE NELLA PAGINA WEB POTREBBERO ESSERE PRESENTI DEI CARATTERI ACCENTATI E IN TAL CASO DEVONO      									ESSERE LEGGIBILI -->
+
+<title> LA MIA PAGINA WEB</title> 					<!-- QUESTO CODICE DA IL NOME ALLA SCHEDA DELLA PAGINA WEB -->
+
+</head> 								<!-- QUESTO CODICE CHIUDE L'HEAD -->
+
+<body> 									<!-- QUESTO CODICE APRE/INIZIA IL BODY, CHE E' LA PARTE CENTRALE DELLA PAGINA WEB -->
+
+<!-- in seguito qui inseriremo un menu di navigazione per spostarci all'interno della pagina web -->
+
+<!-- inoltre inseriremo il corpo della pagina web -->
+
+<p> QUESTO è IL CORPO DELLA MIA PAGINA WEB </p> 			<!-- p  INDICA UN PARAGRAGO, ALL'INTERNO DEL PARAGRAFO ABBIAMO AGGIUNTO UN PICCOLO TESTO DI PROVA -->
+
+</body> 								<!-- IL BODY VIENE CHIUSO -->
+
+</html> 								<!-- LA PAGINA HTML TERMINA QUI, QUINDI TUTTO IL CODICE INSERITO SUCCESSIVAMENTE A QUESTA RIGA, NON VERRA' PRESO IN 									CONSIDERAZIONE -->
+
+
+

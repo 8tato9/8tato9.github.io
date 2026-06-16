@@ -1,0 +1,36 @@
+<!-- il contenuto di questa parentesi è un commento che non inciderà con il codice della pagina -->
+
+
+
+
+<!DOCTYPE html>   							<!-- QUESTO CODICE INDICA CHE STIAMO PER SCRIVERE UNA PAGINA WEB IN HTML  -->
+
+<html lang="it">							<!-- QUESTO CODICE INDICA CHE IL CONTENUTO SARÁ IN ITALIANO  -->
+
+<head> 									<!-- INIZIO/APERTURA HEAD "LA TESTA" LA PARTE PIU ALTA DELLA PAGINA WEB  -->
+
+
+
+<!-- Successivamente inseriremo le VARIABILI che andranno a gestire le impostazioni della pagina web come: dimensioni carattere, colore carattere, colore sfondo pagina, ecc... -->
+
+
+<meta charset="utf-8"> 							<!-- QUESTO CODICE INDICA CHE NELLA PAGINA WEB POTREBBERO ESSERE PRESENTI DEI CARATTERI ACCENTATI E IN TAL CASO DEVONO      									ESSERE LEGGIBILI -->
+
+<title> LA MIA PAGINA WEB</title> 					<!-- QUESTO CODICE DA IL NOME ALLA SCHEDA DELLA PAGINA WEB -->
+
+</head> 								<!-- QUESTO CODICE CHIUDE L'HEAD -->
+
+<body> 									<!-- QUESTO CODICE APRE/INIZIA IL BODY, CHE E' LA PARTE CENTRALE DELLA PAGINA WEB -->
+
+<!-- in seguito qui inseriremo un menu di navigazione per spostarci all'interno della pagina web -->
+
+<!-- inoltre inseriremo il corpo della pagina web -->
+
+<p> QUESTO è IL CORPO DELLA MIA PAGINA WEB </p> 			<!-- p  INDICA UN PARAGRAGO, ALL'INTERNO DEL PARAGRAFO ABBIAMO AGGIUNTO UN PICCOLO TESTO DI PROVA -->
+
+</body> 								<!-- IL BODY VIENE CHIUSO -->
+
+</html> 								<!-- LA PAGINA HTML TERMINA QUI, QUINDI TUTTO IL CODICE INSERITO SUCCESSIVAMENTE A QUESTA RIGA, NON VERRA' PRESO IN 									CONSIDERAZIONE -->
+
+
+
